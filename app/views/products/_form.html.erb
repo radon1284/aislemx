@@ -1,0 +1,17 @@
+<%= form_for([@store, @store.products.build],:html => {:class => 'form-inline'}) do |f| %>
+<div class="form-group">
+<%= f.label :product_name, class: "sr-only" %>
+	<%= f.text_field :product_name, placeholder: :product_name, class: "form-control"  %>
+</div>
+<div class="form-group">
+<%= f.label :product_price, class: "sr-only" %>
+	<%= f.text_field :product_price, placeholder: :product_price, class: "form-control" %>
+</div>
+<div class="form-group">
+<%= f.label :product_aisle_number, class: "sr-only" %>
+	<%= f.text_field :product_aisle_number, placeholder: :product_aisle_number, class: "form-control" %>
+</div>
+<div class="form-group">
+	<%= f.submit "Add Products", class: "btn btn-primary" %>
+</div>
+<% end %>

@@ -9,16 +9,27 @@
   <strong>Store image:</strong>
   <%= @store.store_image %>
 </p>
-<div id="todo_items_wrapper">
-	<%= render @store.products %>
-	<div id="form">
-		<%= render "product/form" %>
-	</div>
-</div>
+
 <p>
   <strong>Store location:</strong>
   <%= @store.store_location %>
 </p>
 
+ <div class="table-responsive">
+  <table class="table table-striped">
+  <thead>
+    <th>Product Name</th>
+    <th>Product Price</th>
+    <th>Product Aisle Number</th>
+    <th></th>
+  </thead>
+  <tbody>
+	<%= render @store.products %>
+  </tbody>
+  </table>
+</div>
+	<div id="form">
+		<%= render "products/form" %>
+	</div>
 <%= link_to 'Edit', edit_store_path(@store) %> |
 <%= link_to 'Back', stores_path %>

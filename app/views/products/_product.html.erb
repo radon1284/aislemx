@@ -1,0 +1,7 @@
+<tr>
+  <td><%= product.product_name %></td>
+  <td><%= product.product_price %></td>
+  <td><%= product.product_aisle_number %></td>
+  <td><%= link_to store_product_path(@store, product.id), method: :delete, data: { confirm: "Are you sure?" } do %> <i class="fa fa-trash"></i>
+    <% end %></td>
+</tr>

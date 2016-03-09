@@ -1,6 +1,0 @@
-<%= form_for([@store, @store.products.build]) do |f| %>
-	<%= f.text_field :product_name, placeholder: :product_name %>
-	<%= f.text_field :product_price, placeholder: :product_price %>
-	<%= f.text_field :product_aisle_number, placeholder: :product_aisle_number %>
-	<%= f.submit "Add Products", class: "btn btn-primary" %>
-<% end %>

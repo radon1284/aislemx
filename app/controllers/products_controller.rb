@@ -1,4 +1,4 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
 
 	before_action :set_store
 	before_action :set_product, except: [:create]
@@ -19,7 +19,7 @@ class ProductController < ApplicationController
 
 	# def complete
 	# 	@product.update_attribute(:completed_at, Time.now)
-	# 	redirect_to @store, notice: "Todo item completed"
+	# 	redirect_to @store, notice: "Product item completed"
 	# end
 
 	private
