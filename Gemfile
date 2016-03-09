@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-
+ruby "2.2.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use SCSS for stylesheets
-gem 'font-awesome-rails', '~> 4.5', '>= 4.5.0.1'
+gem 'font-awesome-rails', '~> 4.5', '>= 4.5.0.1'                                                                                                                                                                                                                                                   
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'autoprefixer-rails', '~> 6.3', '>= 6.3.3.1'
 gem 'sass-rails', '~> 5.0'
