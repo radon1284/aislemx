@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'search_pages/search'
+
   resources :stores do
     resources :products
   end
-  root 'stores#index'
+  root 'search_pages#search'
 end

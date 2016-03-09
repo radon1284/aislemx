@@ -1,0 +1,62 @@
+<style type="text/css">
+.entry:not(:first-of-type)
+{
+    margin-top: 10px;
+}
+
+.glyphicon
+{
+    font-size: 12px;
+}
+</style>
+<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+	        <div class="control-group" id="fields">
+	            <h3 style="text-align: center;">Search Multiple Products</h3>
+	            <div class="controls"> 
+	                <form role="form" autocomplete="off">
+	                    <div class="entry input-group col-xs-12">
+	                        <input class="form-control" name="fields[]" type="text" placeholder="Type something" />
+	                    	<span class="input-group-btn">
+	                            <button class="btn btn-success btn-add" type="button">
+	                                <span class="glyphicon glyphicon-plus"></span>
+	                            </button>
+	                        </span>
+	                    </div>
+	                    <p style="text-align: center; padding-top: 15px">
+	                    <button type="submit"class="btn btn-lg btn-success text-center">Submit</button>
+	                    <p>
+	                </form>
+	            </div>
+	        </div>
+		</div>
+	</div>
+
+</div>
+<script type="text/javascript">
+$(function()
+{
+    $(document).on('click', '.btn-add', function(e)
+    {
+        e.preventDefault();
+
+        var controlForm = $('.controls form:first'),
+            currentEntry = $(this).parents('.entry:first'),
+            newEntry = $(currentEntry.clone()).appendTo(controlForm);
+
+        newEntry.find('input').val('');
+        controlForm.find('.entry:not(:last) .btn-add')
+            .removeClass('btn-add').addClass('btn-remove')
+            .removeClass('btn-success').addClass('btn-danger')
+            .html('<span class="glyphicon glyphicon-minus"></span>');
+    }).on('click', '.btn-remove', function(e)
+    {
+		$(this).parents('.entry:first').remove();
+
+		e.preventDefault();
+		return false;
+	});
+});
+
+</script>
